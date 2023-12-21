@@ -1,11 +1,18 @@
+require("dotenv").config();
 const express = require("express");
 
 const app = express();
 
-app.use(express.urlencoded({ extended: true }));
+const PORT = process.env.PORT;
 
 app.get("/", (req, res) => {
   res.status(200).json({ message: "message from root" });
 });
+app.get("/login", (req, res) => {
+  res.status(200).json({ message: "message from root" });
+});
+app.get("/signup", (req, res) => {
+  res.status(200).json({ message: "message from root" });
+});
 
-app.listen(3000, () => console.log("Server is running on port 3000..."));
+app.listen(PORT, () => console.log("Server is running on port 3000..."));
