@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT;
 
 app.get("/", (req, res) => {
-  res.status(200).json({ message: "message from root" });
+  res.send("<h1>hello world from testing server</h1>");
 });
 app.get("/login", (req, res) => {
   res.status(200).json({ message: "message from root" });
